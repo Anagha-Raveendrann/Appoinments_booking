@@ -1,4 +1,7 @@
-import 'package:appoinments_booking/features/appoinments/presentation/screens/splash_screen.dart';
+
+
+import 'package:appoinments_booking/features/appoinments/presentation/screens/home_screen.dart';
+import 'package:appoinments_booking/features/appoinments/presentation/widgets/search_sort_bar.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: SplashScreen()
+      home: HomeScreen()
     );
   }
 }
