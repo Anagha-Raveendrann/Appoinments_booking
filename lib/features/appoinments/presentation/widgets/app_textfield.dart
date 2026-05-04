@@ -14,7 +14,7 @@ class AppTextfield extends StatelessWidget {
      required this.controller, 
      this.isPassword = false,
       this.KeyboardType = TextInputType.text,
-       this.prefixIcon});
+       this.prefixIcon, required TextInputType keyboardType});
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +46,7 @@ class AppTextfield extends StatelessWidget {
           // focus border 
           focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(14),
-          borderSide: const BorderSide(color: Color(0xff0E6B3E), )
+          borderSide: const BorderSide(color: Color(0xff0E6B3E), ),
           ),
       ),
     );

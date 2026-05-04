@@ -1,3 +1,4 @@
+import 'package:appoinments_booking/features/appoinments/presentation/screens/register_screen.dart';
 import 'package:appoinments_booking/features/appoinments/presentation/widgets/app_button.dart';
 import 'package:flutter/material.dart';
 import '../widgets/common_appbar.dart';
@@ -24,7 +25,9 @@ class HomeScreen extends StatelessWidget {
             child:AppButton(
               title: "Register Now", 
               onTap: (){
-                print("Register tapped");
+             Navigator.pushReplacement(context, 
+   MaterialPageRoute(builder: (_)=> RegisterScreen())
+   );
               }
               ) 
           ),

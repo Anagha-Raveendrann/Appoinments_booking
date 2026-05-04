@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:appoinments_booking/features/appoinments/presentation/screens/home_screen.dart';
 import 'package:appoinments_booking/features/appoinments/presentation/widgets/app_textfield.dart';
 import 'package:flutter/material.dart';
 
@@ -39,7 +40,7 @@ class LoginScreen extends StatelessWidget {
 
                   // logo center 
                   Center(
-                    child: Image.asset('assets/healthlogo.jpg',
+                    child: Image.asset('assets/download.png',
                     width: 120,
                     ),
                   ),
@@ -76,6 +77,7 @@ class LoginScreen extends StatelessWidget {
                      controller: emailController,
                        KeyboardType: TextInputType.emailAddress,
                        prefixIcon: Icons.email,
+                       keyboardType: TextInputType.emailAddress,
                        ),
                     const SizedBox(height: 20,
                     ),
@@ -91,6 +93,7 @@ class LoginScreen extends StatelessWidget {
                     controller: passordController,
                     isPassword: true,
                     prefixIcon: Icons.lock,
+                    keyboardType: TextInputType.visiblePassword,
                     ),
                     const SizedBox(height: 40,),
 
@@ -105,7 +108,11 @@ class LoginScreen extends StatelessWidget {
                             borderRadius: BorderRadiusGeometry.circular(14)
                           )
                         ),
-                        onPressed: (){}, 
+                        onPressed: (){
+                           Navigator.pushReplacement(context, 
+   MaterialPageRoute(builder: (_)=> HomeScreen())
+   );
+                        }, 
                         child: Text("Login",
                         style: TextStyle(fontSize: 18),
                         ),
